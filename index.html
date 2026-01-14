@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Helmy - Full Stack Developer specializing in modern web applications">
-    <title>Helmy | Full Stack Developer</title>
+    <meta name="description" content="Portfolio MHSF - Frontend Developer & Web Apps Specialist">
+    <meta name="keywords" content="portfolio, web developer, frontend, landing page, web apps">
+    <meta name="author" content="MHSF">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MHSF | Portfolio">
+    <meta property="og:description" content="Frontend Developer & Web Apps Specialist">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23111' width='100' height='100' rx='20'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white'>M</text></svg>">
+
+    <title>MHSF | Portfolio</title>
+
+    <!-- Preconnect untuk optimasi loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
+    <link rel="preconnect" href="https://script.google.com">
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com">
+
+    <!-- Font dengan display swap untuk performa -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <span class="logo-text">H</span>elmy
+                <span class="logo-text" id="logo-initial">M</span><span id="logo-name">HSF</span>
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigasi">
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
             </ul>
         </div>
     </nav>
@@ -31,17 +58,20 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content fade-in">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-name">Helmy</h1>
-            <h2 class="hero-title">Full Stack Developer</h2>
-            <p class="hero-description">
-                Passionate about creating elegant, performant, and user-friendly 
-                web applications. Specializing in modern JavaScript frameworks 
-                and building scalable solutions.
+            <p class="hero-greeting">Halo, Saya</p>
+            <h1 class="hero-name" id="hero-name">
+                <span class="skeleton skeleton-text" style="width: 200px;"></span>
+            </h1>
+            <h2 class="hero-title" id="hero-title">
+                <span class="skeleton skeleton-text" style="width: 250px;"></span>
+            </h2>
+            <p class="hero-description" id="hero-description">
+                <span class="skeleton skeleton-text"></span>
+                <span class="skeleton skeleton-text" style="width: 80%;"></span>
             </p>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+                <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
             </div>
         </div>
         <div class="hero-decoration">
@@ -55,79 +85,33 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <h2 class="section-title">Proyek</h2>
+                <p class="section-subtitle">Beberapa karya terbaru saya</p>
             </div>
-            <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <article class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="assets/projects/project-1.png" alt="Landing Page Project">
-                        <div class="project-overlay">
-                            <a href="https://github.com/helmy" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Loading skeleton cards -->
+                <article class="project-card skeleton-card">
+                    <div class="project-image skeleton skeleton-image"></div>
                     <div class="project-info">
-                        <h3 class="project-title">Corporate Landing Page</h3>
-                        <p class="project-desc">Modern responsive landing page with clean design and smooth animations</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
+                        <h3 class="skeleton skeleton-text" style="width: 70%;"></h3>
+                        <p class="skeleton skeleton-text"></p>
+                        <p class="skeleton skeleton-text" style="width: 60%;"></p>
                     </div>
                 </article>
-
-                <!-- Project Card 2 -->
-                <article class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="assets/projects/project-2.png" alt="Dashboard Web App">
-                        <div class="project-overlay">
-                            <a href="https://github.com/helmy" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+                <article class="project-card skeleton-card">
+                    <div class="project-image skeleton skeleton-image"></div>
                     <div class="project-info">
-                        <h3 class="project-title">Analytics Dashboard</h3>
-                        <p class="project-desc">Full-featured dashboard with data visualization and real-time analytics</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Chart.js</span>
-                        </div>
+                        <h3 class="skeleton skeleton-text" style="width: 70%;"></h3>
+                        <p class="skeleton skeleton-text"></p>
+                        <p class="skeleton skeleton-text" style="width: 60%;"></p>
                     </div>
                 </article>
-
-                <!-- Project Card 3 -->
-                <article class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="assets/projects/project-3.png" alt="E-commerce App">
-                        <div class="project-overlay">
-                            <a href="https://github.com/helmy" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+                <article class="project-card skeleton-card">
+                    <div class="project-image skeleton skeleton-image"></div>
                     <div class="project-info">
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-desc">Complete e-commerce solution with cart, payments, and inventory management</p>
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Prisma</span>
-                            <span class="tag">Stripe</span>
-                        </div>
+                        <h3 class="skeleton skeleton-text" style="width: 70%;"></h3>
+                        <p class="skeleton skeleton-text"></p>
+                        <p class="skeleton skeleton-text" style="width: 60%;"></p>
                     </div>
                 </article>
             </div>
@@ -138,36 +122,18 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together on your next project</p>
+                <h2 class="section-title">Hubungi Saya</h2>
+                <p class="section-subtitle">Mari berkolaborasi untuk proyek Anda</p>
             </div>
             <div class="contact-content fade-in">
-                <p class="contact-text">
-                    I'm always open to discussing new projects, creative ideas, 
-                    or opportunities to be part of your visions.
+                <p class="contact-text" id="contact-text">
+                    Saya selalu terbuka untuk mendiskusikan proyek baru, ide kreatif,
+                    atau kesempatan untuk menjadi bagian dari visi Anda.
                 </p>
-                <div class="contact-links">
-                    <a href="mailto:helmy@example.com" class="contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        helmy@example.com
-                    </a>
-                    <a href="https://github.com/helmy" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        github.com/helmy
-                    </a>
-                    <a href="https://linkedin.com/in/helmy" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                        LinkedIn
-                    </a>
+                <div class="contact-links" id="contact-links">
+                    <!-- Dynamic social links will be loaded here -->
+                    <div class="skeleton skeleton-text" style="width: 200px; height: 48px; border-radius: 30px;"></div>
+                    <div class="skeleton skeleton-text" style="width: 180px; height: 48px; border-radius: 30px;"></div>
                 </div>
             </div>
         </div>
@@ -176,10 +142,55 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Helmy. All rights reserved.</p>
+            <p id="footer-text">&copy; 2026 MHSF. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Configuration -->
+    <script>
+        // ============================================
+        // KONFIGURASI - EDIT DI SINI
+        // ============================================
+        const CONFIG = {
+            // URL Google Apps Script yang sudah di-deploy
+            API_URL: 'https://script.google.com/macros/s/AKfycbxlXNi5p1nQC1JdWMneyV4a3PoxO4JXCUepikC-ZG3scOoyTGtI-d-ds9Z60bLGcTP1cw/exec',
+
+            // Set ke true untuk menggunakan data sampel (testing tanpa API)
+            USE_SAMPLE_DATA: false,
+
+            // Timeout untuk API request (ms)
+            API_TIMEOUT: 10000,
+
+            // Cache duration (ms) - 5 menit
+            CACHE_DURATION: 5 * 60 * 1000
+        };
+
+        // Data sampel untuk testing
+        const SAMPLE_DATA = {
+            profile: {
+                name: 'MHSF',
+                tagline: 'Frontend Developer',
+                description: 'Passionate dalam membuat aplikasi web yang elegan, cepat, dan user-friendly.',
+                email: 'email@example.com'
+            },
+            projects: [
+                {
+                    id: 1,
+                    title: 'Landing Page',
+                    description: 'Landing page modern dengan desain responsif',
+                    image_url: 'assets/projects/project-1.png',
+                    link_project: 'https://example.com',
+                    tags: ['HTML', 'CSS', 'JavaScript'],
+                    order: 1
+                }
+            ],
+            social: [
+                { platform: 'email', url: 'mailto:email@example.com', icon: 'email' },
+                { platform: 'github', url: 'https://github.com/mhsf', icon: 'github' }
+            ]
+        };
+    </script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
